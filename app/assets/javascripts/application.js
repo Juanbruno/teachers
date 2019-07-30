@@ -10,11 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-
 //= require jquery3
 //= require popper
-//= require bootstrap
-
+//= require bootstrap-sprockets
 
 //= require easing
 //= require mobile-nav
@@ -26,7 +24,6 @@
 //= require js/lightbox
 
 //= require main
-
 
 //= require rails-ujs
 //= require activestorage
