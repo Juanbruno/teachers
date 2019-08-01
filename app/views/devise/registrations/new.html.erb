@@ -10,6 +10,12 @@
 
           <%= render "devise/shared/error_messages", resource: resource %>
 
+
+          <div class="form-group">
+            <%= f.collection_select :city_id, City.order(:name), :id, :name, {promp: "select City..."}, {class: "form-control", autofocus: true, required: true } %>
+
+          </div>
+
           <div class="form-group">
             <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Your Email", id: "email", "data-rule": "email", "data-msg": "Please enter a valid email" %>
             <div class="validation"></div>

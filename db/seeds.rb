@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+City.delete_all
+City.create([
+	{ name: 'Medellin' },
+	{ name: 'Bogota' },
+	{ name: 'Cali' },
+	{ name: 'Barranquilla' },
+	{ name: 'Manizales' },
+	{ name: 'Cartagena' },
+	{ name: 'Bucaramanga' },
+	{ name: 'Pasto' },
+	{ name: 'Pereira' },
+	{ name: 'Cucuta' },
+	{ name: 'Bello' },
+])

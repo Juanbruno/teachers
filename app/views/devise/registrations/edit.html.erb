@@ -4,8 +4,9 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :city %><br />
+     <%= f.collection_select :city_id, City.order(:name), :id, :name, {promp: "select City..."}, {class: "form-control", autofocus: true, required: true } %>
+    
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
