@@ -93,7 +93,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   ActionMailer::Base.smtp_settings = {
-  :user_name => ENV['Juanbruno'],
+  :user_name => ENV['jpruizk9@gmail.com'],
   :password => ENV['Brunovaldok9123'],
   :domain => 'https://teachers-bruno.herokuapp.com/',
   :address => 'smtp.sendgrid.net',
