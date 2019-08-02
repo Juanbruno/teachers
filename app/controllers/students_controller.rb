@@ -25,6 +25,9 @@ class StudentsController < ApplicationController
   # POST /students.json
   def create
     @student = Student.new(student_params)
+    @student.user= current_user #guarda el usuario al que corresponde
+
+    current_user.update(role: :student)
 
     respond_to do |format|
       if @student.save
