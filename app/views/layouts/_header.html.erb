@@ -1,35 +1,45 @@
 <!--==========================
   Header
 ============================-->
-
 <header id="header">
+
 <div class="container">
 
   <div class="logo float-left">
     <!-- Uncomment below if you prefer to use an image logo -->
-    <h1 class="text-light"><a href="#intro" class="scrollto"><span>TEACHERS</span></a></h1>
-    <!-- <a href="#header" class="scrollto"><img src="<%#= image_path('/assets/logo.png') %>" alt="" class="img-fluid"></a> -->
+    <h1 class="text-light"><a href="#intro" class="scrollto"><span>Rapid</span></a></h1>
+    <!-- <a href="#header" class="scrollto"><img src="<%= image_path('/assets/logo.png') %>" alt="" class="img-fluid"></a> -->
   </div>
 
   <nav class="main-nav float-right d-none d-lg-block">
     <ul>
       <li class="active"><a href="#intro">Home</a></li>
-        <% if user_signed_in? %>
-          <li>
-            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-          </li>
-        <% else %>
-          <li>
-            <%= link_to "Sing in", new_user_session_path %>
-          </li>
-          <li>
-            <%= link_to "Register as Student", new_user_registration_path(role: "student") %>
-          </li>
-          <li>
-            <%= link_to "Register as Teacher", new_user_registration_path(role: "Teacher") %>
-          </li>
-        <% end %>
+      
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        </li>
+
+        <li>
+          <img src="<%= @avatar %>" class="rounded-circle">
+        </li>
+      
+      <% else %>
+        <li>
+          <%= link_to "Sign In", new_user_session_path %>
+        </li>
+        <li>
+          <%= link_to "Register as Student", new_user_registration_path(role: "student") %>
+        </li>
+        <li>
+          <%= link_to "Register as Teacher", new_user_registration_path(role: "teacher") %>
+        </li>
+      <% end %>
+
+
+  
+    </ul>
   </nav><!-- .main-nav -->
   
 </div>
-</header>
+</header><!-- #header -->

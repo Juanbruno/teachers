@@ -20,4 +20,9 @@ class User < ApplicationRecord
   def send_welcome_email
   	UserNotifierMailer.welcome_user(self).deliver_now
   end
+
+  def avatar_url
+    hash = Digest::MD5.hexdigest(email)
+    "https://www.gravatar.com/avatar/#{hash}?s=32&d=robohash"
+  end
 end

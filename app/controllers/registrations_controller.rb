@@ -6,6 +6,7 @@ class RegistrationsController < Devise::RegistrationsController
 			new_student_path(role: params[:role])
 		elsif params[:role] == "teacher"
 			root_path(role: params[:role])
+		end
 
 	end
 end
