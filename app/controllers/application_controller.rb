@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 	protected
 
 	def add_parameters_to_user
-		devise_parameter_sanitizer.permit(:sign_up, keys: [:city_id])
-		devise_parameter_sanitizer.permit(:account_update, keys: [:city_id])
+		devise_parameter_sanitizer.permit(:sign_up, keys: [:city_id, :role])
+		devise_parameter_sanitizer.permit(:account_update, keys: [:city_id, :role])
 end
 end
