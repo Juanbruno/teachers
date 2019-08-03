@@ -1,5 +1,0 @@
-def sentence_join array
-  array[0..-2].join(", ") + ", and " + array.last
-end
-
-print sentence_join arr
