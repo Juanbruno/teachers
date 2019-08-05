@@ -12,7 +12,11 @@
 
 <p>
   <strong>Phone:</strong>
-  <%= @student.phone %>
+    <%= @student.phone %>
+</p>
+
+<p>
+	<%= image_tag @student.image_url %>
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |

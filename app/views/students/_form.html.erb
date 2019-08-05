@@ -18,7 +18,13 @@
 
   <div class="field">
     <%= form.label :phone %>
+
     <%= form.number_field :phone %>
+  </div>
+
+  <div calss="field">
+    <%= form.hidden_field :image, value: @student.cached_image_data %>    
+    <%= form.file_field :image %>    
   </div>
 
   <div class="actions">

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :students
   resources :cities
+  resources :photos
 
 
 end
