@@ -10,12 +10,12 @@ class ApplicationController < ActionController::Base
 			devise_parameter_sanitizer.permit(:account_update, keys: [:role, :city_id])
 		end
 
-	def avatar
-		@avatar = user_signed_in? ? current_user.avatar_url : nil
-	end
+		def avatar
+			@avatar = user_signed_in? ? current_user.avatar_url : nil
+		end
 
-	def large_avatar
-		avatar_url = user_signed_in? ? current_user.avatar_url : nil
-		@large_avatar = "#{avatar_url}&s=400"
-	end
+		def large_avatar
+			avatar_url = user_signed_in? ? current_user.avatar_url : nil
+			@large_avatar = "#{avatar_url}&s=100"
+		end
 end
