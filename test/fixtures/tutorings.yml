@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student: one
+  teacher: one
+  topic: one
+  when: 2019-08-06 18:13:46
+  where: MyText
+
+two:
+  student: two
+  teacher: two
+  topic: two
+  when: 2019-08-06 18:13:46
+  where: MyText
