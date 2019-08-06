@@ -1,10 +1,10 @@
-<%= form_with(model: student, local: true) do |form| %>
-  <% if student.errors.any? %>
+<%= form_with(model: teacher, local: true) do |form| %>
+  <% if teacher.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+      <h2><%= pluralize(teacher.errors.count, "error") %> prohibited this student from being saved:</h2>
 
       <ul>
-      <% student.errors.full_messages.each do |message| %>
+      <% teacher.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -22,11 +22,11 @@
   </div>
 
   <div class="field">
-    <%= form.hidden_field :image, value: form.object.cached_image_data %>
+    <%#= form.hidden_field :image, value: form.object.cached_image_data %>
     <%= form.file_field :image %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
-<% end %>
+<% end %> 

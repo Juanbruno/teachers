@@ -1,4 +1,3 @@
-
 class Student < ApplicationRecord
 	include ImageUploader[:image]
 	

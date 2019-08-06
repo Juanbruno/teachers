@@ -1,0 +1,36 @@
+
+<h1>New Teacher</h1>
+
+<%= form_for @teacher, url: teachers_path, method: :post do |f| %>
+
+  <!-- Errors from validation -->
+  <% if @teacher.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@teacher.errors.count, "error") %> prohibited this @teacher from being saved:</h2>
+
+      <ul>
+      <% @teacher.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <!-- end errors -->
+
+  <div class="form-group">
+    <%= f.collection_select :type_id, Type.order(:name), :id, :name, { prompt: "Select Type of Tutoring..."}, { class: "form-control", autofocus: true, required: true } %>
+  </div>
+
+  <div class="form-group">
+    <%= f.number_field :phone, class: "form-control", required: true, placeholder: "Phone Number" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :name, class: "form-control", required: true, placeholder: "Name" %>
+  </div>
+
+  <div class="text-center mt-3 mb-5">
+    <button type="submit" class="btn btn-primary btn-block" title="Register">Register</button>
+  </div>
+
+ <% end %>
